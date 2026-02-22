@@ -835,3 +835,64 @@ li a:hover {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 1; }
 }
+
+.update-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: fadeInOverlay 0.5s ease;
+}
+
+.update-box {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  color: white;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+  animation: scaleIn 0.4s ease;
+}
+
+.update-box h1 {
+  margin-bottom: 15px;
+  font-size: 26px;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.update-box p {
+  font-size: 15px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.update-box button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #00ffff;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.update-box button:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
