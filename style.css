@@ -896,3 +896,24 @@ li a:hover {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+.carrossel {
+  width: 100%;
+  padding: 30px 20px;
+  overflow: hidden;
+}
+
+.carrossel-track {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.carrossel-track img {
+  width: 280px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
