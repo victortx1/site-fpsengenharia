@@ -2,13 +2,40 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>FPS Engenharia1 | Site Oficial</title>
+  <title>FPS Engenharia1</title>
+  <link rel="icon" type="image/png" href="./fotos-da-fps/raio.png">
   <meta name="description" content="FPS Engenharia - soluções em engenharia, energia e tecnologia. Conheça nosso site oficial.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQKTP9Q79F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PQKTP9Q79F');
+  </script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+  <div class="login-popup" id="loginPopup" style="display: none;">
+    <div class="login-box">
+      <span class="close-popup" onclick="fecharPopup()">×</span>
+
+      <h2>🚀 Entre para continuar</h2>
+      <p>
+        Crie sua conta grátis com o Google e tenha acesso completo aos serviços da
+        <strong>FPS Engenharia</strong>.
+      </p>
+
+      <button class="google-login-btn" type="button" onclick="registrarLoginGoogle()">
+        <i class="fab fa-google"></i> Entrar com Google
+      </button>
+    </div>
+  </div>
 
   <script>
     window.onbeforeunload = function () {
@@ -21,12 +48,14 @@
     <span>FPS ENGENHARIA</span>
   </div>
 
-  <!-- BOTÃO WHATSAPP -->
-  <a href="https://wa.me/557381263235" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/557381263235"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     onclick="registrarCliqueWhatsApp()">
     <abbr title="Fale conosco no WhatsApp.">💬</abbr>
   </a>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="logo">
       ⚡ <span>FPSENGENHARIA</span>
@@ -39,11 +68,12 @@
     </nav>
 
     <div class="header-buttons">
-      <a href="Sejaparceiro.html" class="footer-btn">Seja parceiro FPS</a>
+      <button class="footer-btn google-btn" type="button" onclick="registrarLoginGoogle()">
+        <i class="fab fa-google"></i> Entrar com Google
+      </button>
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-text" data-animate>
       <h1>Soluções Elétricas Seguras e Confiáveis</h1>
@@ -64,7 +94,7 @@
       <img src="fotos-da-fps/foto-principal.png.png" alt="Projeto FPS Engenharia">
 
       <div class="rating">
-        <a href="https://g.page/r/CbxDkQ17Nzm-EAI/review" target="_blank" class="rating-link">
+        <a href="https://g.page/r/CbxDkQ17Nzm-EAI/review" target="_blank" rel="noopener noreferrer" class="rating-link">
           ⭐⭐⭐⭐⭐ <br>
           <abbr title="Nos avalie no Google.">Avaliação 5.0</abbr><br>
           <small>Google Reviews</small>
@@ -73,7 +103,6 @@
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
   <section class="services" id="servico">
     <h2 data-animate>Serviços FPS Engenharia</h2>
 
@@ -104,7 +133,6 @@
     </div>
   </section>
 
-  <!-- GALERIA -->
   <section class="carrossel" id="galeria">
     <div class="carrossel-track">
       <img src="fotos-da-fps/Imagem do WhatsApp de 2025-09-19 à(s) 18.17.30_d7eb0656.jpg" alt="">
@@ -146,7 +174,6 @@
     </div>
   </section>
 
-  <!-- CONSERTOS DISPONÍVEIS -->
   <section class="repairs-exact">
     <div class="repairs-box" data-animate>
       <div class="repairs-photo">
@@ -154,11 +181,7 @@
       </div>
 
       <div class="repairs-info">
-        <h2>
-          Consertos<br>
-          disponíveis
-        </h2>
-
+        <h2>Consertos<br>disponíveis</h2>
         <ul>
           <li>Troca de lâmpadas</li>
           <li>Luminária e reator eletrônico</li>
@@ -239,26 +262,10 @@
         <h4>Links Rápidos</h4>
         <ul>
           <li><a href="perguntas.html" class="link-faq">Perguntas frequentes</a></li>
-          <li>
-            <a href="https://wa.me/557381263235?text=Olá,%20gostaria%20de%20falar%20com%20o%20SAC%20da%20FPS" target="_blank">
-              SAC e telefones
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me/557381263235?text=Olá,%20gostaria%20de%20falar%20com%20a%20FPS" target="_blank">
-              WhatsApp
-            </a>
-          </li>
-          <li>
-            <a href="https://g.page/r/CbxDkQ17Nzm-EAI/review" target="_blank">
-              Endereços
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me/557381263235?text=Olá,%20gostaria%20de%20falar%20com%20a%20FPS" target="_blank">
-              FPS em um clique
-            </a>
-          </li>
+          <li><a href="https://wa.me/557381263235?text=Olá,%20gostaria%20de%20falar%20com%20o%20SAC%20da%20FPS" target="_blank" rel="noopener noreferrer">SAC e telefones</a></li>
+          <li><a href="https://wa.me/557381263235?text=Olá,%20gostaria%20de%20falar%20com%20a%20FPS" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="https://g.page/r/CbxDkQ17Nzm-EAI/review" target="_blank" rel="noopener noreferrer">Endereços</a></li>
+          <li><a href="https://wa.me/557381263235?text=Olá,%20gostaria%20de%20falar%20com%20a%20FPS" target="_blank" rel="noopener noreferrer">FPS em um clique</a></li>
           <li><a href="PolíticadePrivacidade.html" class="link-faq">Política de Privacidade</a></li>
           <li><a href="termosdeuso.html" class="link-faq">Termos de Uso</a></li>
         </ul>
@@ -278,34 +285,20 @@
         <p>Acompanhe a FPS nas redes sociais</p>
 
         <div class="social-icons">
-          <a href="https://www.facebook.com/profile.php?id=61581653380737" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-
-          <a href="https://www.instagram.com/fps.engenharia1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-          <a href="https://www.linkedin.com/in/fps-engenharia-a16332397/" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-
-          <a href="https://youtube.com/@fpseletrica?si=7RQKZPelhBSvaSt7" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
-
-          <a href="https://www.tiktok.com/@fpsengenharia1?is_from_webapp=1&sender_device=pc" target="_blank">
-            <i class="fab fa-tiktok"></i>
-          </a>
+          <a href="https://www.facebook.com/profile.php?id=61581653380737" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/fps.engenharia1?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/fps-engenharia-a16332397/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://youtube.com/@fpseletrica?si=7RQKZPelhBSvaSt7" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@fpsengenharia1?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
 
       <div class="header-buttons">
-        <a href="Sejaparceiro.html" class="footer-btn">Seja parceiro FPS</a>
+        <button class="footer-btn google-btn" type="button" onclick="registrarLoginGoogle()">
+          <i class="fab fa-google"></i> Entrar com Google
+        </button>
 
-        <div class="footer-icon">
-          ⚡
-        </div>
+        <div class="footer-icon">⚡</div>
       </div>
     </div>
 
@@ -319,7 +312,6 @@
     </p>
   </footer>
 
-  <!-- AVISO DE COOKIES -->
   <div class="cookies" id="cookies">
     <div class="cookies-container">
       <div class="cookies-texto">
@@ -344,27 +336,79 @@
   </div>
 
   <script>
-    if (localStorage.getItem("cookiesFPS")) {
-      document.getElementById("cookies").style.display = "none";
+    const cookiesBox = document.getElementById("cookies");
+
+    if (localStorage.getItem("cookiesFPS") && cookiesBox) {
+      cookiesBox.style.display = "none";
     }
 
     function aceitarCookies() {
       localStorage.setItem("cookiesFPS", "aceito");
-      document.getElementById("cookies").style.display = "none";
+      if (cookiesBox) cookiesBox.style.display = "none";
     }
 
     function recusarCookies() {
       localStorage.setItem("cookiesFPS", "recusado");
-      document.getElementById("cookies").style.display = "none";
+      if (cookiesBox) cookiesBox.style.display = "none";
     }
   </script>
 
-  <!-- SCRIPT -->
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="auth.js"></script>
+
   <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
   <script>
+    function registrarLoginGoogle() {
+      if (typeof gtag === "function") {
+        gtag('event', 'login_google', {
+          event_category: 'login',
+          event_label: 'botao_google'
+        });
+      }
+
+      if (typeof loginGoogle === "function") {
+        loginGoogle();
+      } else {
+        console.warn("Função loginGoogle() não encontrada.");
+      }
+    }
+
+    function registrarCliqueWhatsApp() {
+      if (typeof gtag === "function") {
+        gtag('event', 'clique_whatsapp', {
+          event_category: 'engajamento',
+          event_label: 'botao_whatsapp_flutuante'
+        });
+      }
+    }
+
+    function fecharPopup() {
+      const popup = document.getElementById("loginPopup");
+      if (popup) popup.style.display = "none";
+      localStorage.setItem("popupLoginFPS", "true");
+    }
+
     window.addEventListener('load', () => {
+      const loader = document.querySelector('.energy-loader');
+      const popup = document.getElementById("loginPopup");
+      const jaCarregou = sessionStorage.getItem('fpsLoaderJaMostrado');
+      const jaViuPopup = localStorage.getItem("popupLoginFPS");
+
+      if (jaCarregou) {
+        if (loader) loader.remove();
+
+        if (!jaViuPopup && popup) {
+          setTimeout(() => {
+            popup.style.display = "flex";
+          }, 400);
+        }
+        return;
+      }
+
+      sessionStorage.setItem('fpsLoaderJaMostrado', 'true');
+
       gsap.timeline()
         .to('.energy-line', { duration: 1.8 })
         .to('.energy-loader', {
@@ -372,7 +416,6 @@
           duration: 0.8,
           ease: 'power2.out',
           onComplete: () => {
-            const loader = document.querySelector('.energy-loader');
             if (loader) loader.remove();
           }
         })
@@ -382,6 +425,12 @@
           duration: 1.2,
           ease: 'power4.out'
         }, '-=0.4');
+
+      if (!jaViuPopup && popup) {
+        setTimeout(() => {
+          popup.style.display = "flex";
+        }, 2600);
+      }
     });
   </script>
 
